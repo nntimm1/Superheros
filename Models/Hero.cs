@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Superheros.Models
 {
-    public class Superhero
+    public class Hero
     {
         [Key]
         public int SuperheroID { get; set; }

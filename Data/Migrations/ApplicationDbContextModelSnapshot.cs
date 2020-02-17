@@ -219,6 +219,33 @@ namespace Superheros.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Superheros.Models.Superhero", b =>
+                {
+                    b.Property<int>("SuperheroID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AlterEgo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CatchPhrase")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimaryAbility")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecondaryAbility")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SuperheroID");
+
+                    b.ToTable("Superheros");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
